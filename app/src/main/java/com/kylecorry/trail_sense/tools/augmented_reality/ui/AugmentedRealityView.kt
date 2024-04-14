@@ -42,6 +42,7 @@ import com.kylecorry.trail_sense.shared.sensors.SensorService
 import com.kylecorry.trail_sense.shared.text
 import com.kylecorry.trail_sense.shared.textDimensions
 import com.kylecorry.trail_sense.shared.views.CameraView
+import com.kylecorry.trail_sense.tools.augmented_reality.domain.calibration.AutoSunCalibrator
 import com.kylecorry.trail_sense.tools.augmented_reality.domain.calibration.IARCalibrator
 import com.kylecorry.trail_sense.tools.augmented_reality.domain.mapper.CameraAnglePixelMapper
 import com.kylecorry.trail_sense.tools.augmented_reality.domain.mapper.CameraAnglePixelMapperFactory
@@ -178,6 +179,12 @@ class AugmentedRealityView : CanvasView {
         syncWithCamera()
     }
 
+    private val autoCalibrateTimer = CoroutineTimer {
+        val calibrator = AutoSunCalibrator()
+        val bearing = calibrator.calibrateBearing(this, camera ?: return@CoroutineTimer) ?: return@CoroutineTimer
+        calibrationBearingOffset += bearing * 0.5f
+    }
+
     private var isSetup = false
     private val updateTimer = CoroutineTimer(observeOn = Dispatchers.Default) {
         if (!isSetup) {
@@ -202,6 +209,7 @@ class AugmentedRealityView : CanvasView {
             gyroOrientationSensor.start(this::onSensorUpdate)
         }
         updateTimer.interval(20)
+        autoCalibrateTimer.interval(200)
     }
 
     fun stop() {
@@ -210,6 +218,7 @@ class AugmentedRealityView : CanvasView {
         geomagneticOrientationSensor.stop(this::onSensorUpdate)
         gyroOrientationSensor.stop(this::onSensorUpdate)
         updateTimer.stop()
+        autoCalibrateTimer.stop()
     }
 
     fun setLayers(layers: List<ARLayer>) {

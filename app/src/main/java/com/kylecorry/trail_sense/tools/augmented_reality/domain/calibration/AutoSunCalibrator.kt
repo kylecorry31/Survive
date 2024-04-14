@@ -7,6 +7,7 @@ import com.kylecorry.trail_sense.shared.camera.GrayscaleMomentFinder
 import com.kylecorry.trail_sense.shared.views.CameraView
 import com.kylecorry.trail_sense.tools.astronomy.domain.AstronomyService
 import com.kylecorry.trail_sense.tools.augmented_reality.ui.AugmentedRealityView
+import kotlin.math.abs
 
 class AutoSunCalibrator : IARCalibrator {
 
@@ -23,7 +24,7 @@ class AutoSunCalibrator : IARCalibrator {
                 image.recycle()
             }
 
-            val momentFinder = GrayscaleMomentFinder(245, 5)
+            val momentFinder = GrayscaleMomentFinder(250, 5, 1f, 0.2f)
 
             try {
                 val moment = momentFinder.getMoment(scaled) ?: return@onDefault null
@@ -39,7 +40,13 @@ class AutoSunCalibrator : IARCalibrator {
                 val predictedBearing = astro.getSunAzimuth(view.location).value
 
                 // Calculate the bearing difference
-                deltaAngle(actualBearing, predictedBearing)
+                val delta = deltaAngle(actualBearing, predictedBearing)
+
+                if (abs(delta) > 20) {
+                    null
+                } else {
+                    delta
+                }
             } finally {
                 scaled.recycle()
             }
