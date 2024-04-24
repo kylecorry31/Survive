@@ -2,7 +2,6 @@ package com.kylecorry.trail_sense.tools.tools.ui.items.render
 
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import com.kylecorry.andromeda.core.capitalizeWords
 import com.kylecorry.andromeda.core.system.Resources
 import com.kylecorry.andromeda.core.ui.Colors
 import com.kylecorry.andromeda.core.ui.setCompoundDrawables
@@ -36,7 +35,7 @@ class HeaderToolListItemRenderer : ToolListItemRenderer {
         binding.title.setTextColor(Resources.androidTextColorPrimary(context))
         binding.title.paint.isFakeBoldText = false
         binding.title.textSize = 24f
-        binding.title.text = item.title?.capitalizeWords()
+        binding.title.text = item.title
         binding.title.isVisible = item.title != null
 
         // Remove root click listeners

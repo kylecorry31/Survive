@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
 import androidx.core.view.isInvisible
 import androidx.navigation.fragment.findNavController
-import com.kylecorry.andromeda.core.capitalizeWords
 import com.kylecorry.andromeda.core.system.GeoUri
 import com.kylecorry.andromeda.core.system.Resources
 import com.kylecorry.andromeda.core.ui.setCompoundDrawables
@@ -98,7 +97,7 @@ class PlaceBeaconFragment : BoundFragment<FragmentCreateBeaconBinding>() {
         super.onViewCreated(view, savedInstanceState)
         form.bind(binding)
         CustomUiUtils.setButtonState(binding.createBeaconTitle.rightButton, true)
-        binding.createBeaconTitle.title.text = getString(R.string.create_beacon).capitalizeWords()
+        binding.createBeaconTitle.title.text = getString(R.string.create_beacon)
 
         // TODO: Prevent interaction until loaded
         updateIcon()

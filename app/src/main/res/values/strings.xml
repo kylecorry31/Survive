@@ -134,7 +134,7 @@
     <!--    The percent of the moon that is illuminated-->
     <string name="illumination">Illumination</string>
     <!--Tools-->
-    <string name="photo_maps">Photo Maps</string>
+    <string name="photo_maps">Photo maps</string>
     <!--Clinometer-->
     <string name="clinometer_title">Clinometer</string>
     <string name="tool_clinometer_summary">Estimate avalanche risks and the height of objects</string>
@@ -338,7 +338,7 @@
     <string name="pref_max_beacon_distance" translatable="false">pref_max_beacon_distance</string>
     <string name="error_occurred">An error occurred</string>
     <string name="error_occurred_message">Trail Sense ran into an error. Please email the developer to get this issue fixed.</string>
-    <string name="tool_user_guide_title">User Guide</string>
+    <string name="tool_user_guide_title">User guide</string>
     <string name="tool_user_guide_summary">A how-to guide for using Trail Sense</string>
     <string name="delete_beacon_group_message">%s and all its beacons will be deleted.</string>
     <string name="delete_path_group_message">%s and all its paths will be deleted.</string>
@@ -349,7 +349,7 @@
     <string name="advanced">Advanced</string>
     <string name="forecasts_category">Forecasts</string>
     <string name="navigation_nearby_category">Nearby</string>
-    <string name="tool_bubble_level_title">Bubble Level</string>
+    <string name="tool_bubble_level_title">Bubble level</string>
     <string name="tool_bubble_level_summary">Determine if surfaces are flat</string>
     <string name="other">Other</string>
     <string name="category_food">Food</string>
@@ -361,7 +361,7 @@
     <string name="category_safety">Safety</string>
     <string name="category_natural">Natural</string>
     <string name="toast_destination_bearing_set">Destination bearing set</string>
-    <string name="tool_cliff_height_title">Cliff Height</string>
+    <string name="tool_cliff_height_title">Cliff height</string>
     <string name="tool_cliff_height_description">Measure the height of a cliff or drop</string>
     <string name="tool_cliff_height_disclaimer">Only use this tool when it is safe to do so, and be sure to check what is below the cliff to avoid injury. See the user guide for instructions.</string>
     <string name="tool_whistle_title">Whistle</string>
@@ -375,15 +375,15 @@
     <string name="unit_feet">Feet</string>
     <string name="unit_miles">Miles</string>
     <string name="unit_nautical_miles">Nautical miles</string>
-    <string name="guide_recommended_apps">Recommended Apps</string>
+    <string name="guide_recommended_apps">Recommended apps</string>
     <string name="guide_recommended_apps_description">Useful apps for survival situations</string>
     <string name="pref_privacy_policy_title">Privacy policy</string>
     <string name="pref_privacy_policy" translatable="false">pref_privacy_policy</string>
     <string name="privacy_policy_url" translatable="false">https://kylecorry.com/Trail-Sense/privacy_policy.html</string>
     <string name="tool_solar_panel_summary">Position solar panels for optimal power production</string>
-    <string name="tool_solar_panel_title">Solar Panel Aligner</string>
+    <string name="tool_solar_panel_title">Solar panel aligner</string>
     <string name="solar_panel_instructions">Place your phone on the face of the solar panel to begin.</string>
-    <string name="water_boil_timer">Water Boil Timer</string>
+    <string name="water_boil_timer">Water boil timer</string>
     <string name="water_boil_timer_channel_description">Water is boiling</string>
     <string name="water_boil_timer_title">Water boiling</string>
     <string name="water_boil_timer_done_title">Water done boiling</string>
@@ -401,7 +401,7 @@
     <string name="thunder">Thunder</string>
     <string name="reset">Reset</string>
     <string name="tool_lightning_description">Measure the distance from a lightning strike</string>
-    <string name="tool_lightning_title">Lightning Strike Distance</string>
+    <string name="tool_lightning_title">Lightning strike distance</string>
     <string name="precise_centimeters_format">%s cm</string>
     <string name="precise_inches_format">%s in</string>
     <string name="tool_ruler_title">Ruler</string>
@@ -424,7 +424,7 @@
     <string name="power">Power</string>
     <string name="tool_category_angles">Angles</string>
     <string name="tool_category_signaling">Signaling</string>
-    <string name="tool_triangulate_title">Triangulate Location</string>
+    <string name="tool_triangulate_title">Triangulate location</string>
     <string name="could_not_triangulate">Could not triangulate</string>
     <string name="pip_button">Update System Time</string>
     <string name="pip_notification_scheduled">Notification scheduled for %s</string>
@@ -435,7 +435,7 @@
     <string name="clock_sync_time_settings">Open time settings?</string>
     <string name="magnetic_field_format_precise">%s uT</string>
     <string name="threshold">Threshold</string>
-    <string name="tool_metal_detector_title">Metal Detector</string>
+    <string name="tool_metal_detector_title">Metal detector</string>
     <string name="metal_detector_disclaimer">Only detects magnetic metals (ex. iron)</string>
     <string name="update_gps_override">Update GPS override</string>
     <string name="location_override_updated">Location override updated</string>
@@ -451,7 +451,7 @@
     <string name="unit_inches">Inches</string>
     <string name="map_distance">Map: %s</string>
     <string name="map_fractional_separator">:</string>
-    <string name="tool_white_noise_title">White Noise</string>
+    <string name="tool_white_noise_title">White noise</string>
     <string name="tool_white_noise_summary">Helps you fall asleep</string>
     <string name="map_scale_title">Map scale</string>
     <string name="map_scale_ratio">Ratio</string>
@@ -581,7 +581,7 @@
     <string name="lux_format">%s lx</string>
     <string name="candela_format">%s cd</string>
     <string name="beam_distance">%s beam distance</string>
-    <string name="tool_light_meter_title">Light Meter</string>
+    <string name="tool_light_meter_title">Light meter</string>
     <string name="pref_backtrack_save_cell_summary">Records cell signal at the waypoint. Does not use the Internet.</string>
     <string name="pref_backtrack_save_cell_title">Record cell signal</string>
     <string name="pref_holder_pressure_chart" translatable="false">pref_holder_pressure_chart</string>
@@ -688,7 +688,7 @@
     <string name="whistle_signal_where_are_you">Where are you?</string>
     <string name="whistle_signal_acknowledged">Acknowledged</string>
     <string name="whistle_signal_come_here">Come here</string>
-    <string name="weather_monitor">Weather Monitor</string>
+    <string name="weather_monitor">Weather monitor</string>
     <string name="battery_history">Battery history - last %s</string>
     <string name="humidity_history">Humidity history - last %s</string>
     <string name="temperature_history">Temperature history - last %s</string>
@@ -806,7 +806,7 @@
     <string name="electronics">Electronics</string>
     <string name="documents">Documents</string>
     <string name="hygiene">Hygiene</string>
-    <string name="packing_lists">Packing Lists</string>
+    <string name="packing_lists">Packing lists</string>
     <string name="percent_packed">%s packed</string>
     <string name="no_packing_lists">No packing lists</string>
     <string name="new_packing_list">New packing list</string>
@@ -1003,7 +1003,7 @@
     <string name="gps_unavailable">GPS unavailable</string>
     <string name="pref_error_settings" translatable="false">pref_error_settings</string>
     <string name="gps_timeouts">GPS timeouts</string>
-    <string name="qr_code_scanner">QR Code Scanner</string>
+    <string name="qr_code_scanner">QR code scanner</string>
     <string name="no_qr_code_found">No QR code detected</string>
     <string name="saved_to_note">Saved to note</string>
     <!--Verb / Action-->
@@ -1029,7 +1029,7 @@
     <string name="tide_deleted">Tide deleted</string>
     <string name="disclaimer_estimated_tide">Estimated tides may be inaccurate. Please use an official tide table for the exact times.</string>
     <string name="disclaimer_estimated_tide_title">Estimated tide</string>
-    <string name="tool_temperature_estimation_title">Temperature Estimation</string>
+    <string name="tool_temperature_estimation_title">Temperature estimation</string>
     <string name="tool_temperature_estimation_description">Predict the temperature at a different elevation</string>
     <string name="pressure_tendency">Tendency</string>
     <string name="explore">Explore</string>
@@ -1287,7 +1287,7 @@
     <string name="direction_not_set">Direction not set</string>
     <!--The compass direction / bearing-->
     <string name="direction">Direction</string>
-    <string name="augmented_reality">Augmented Reality</string>
+    <string name="augmented_reality">Augmented reality</string>
     <string name="augmented_reality_description">View nearby beacons and the sun / moon with your camera</string>
     <string name="magnetic_north">Magnetic north</string>
     <string name="pinned">Pinned</string>

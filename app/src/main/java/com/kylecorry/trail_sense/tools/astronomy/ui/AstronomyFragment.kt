@@ -152,7 +152,7 @@ class AstronomyFragment : BoundFragment<ActivityAstronomyBinding>() {
                 getString(R.string.lunar_eclipse),
                 getString(R.string.solar_eclipse),
                 getString(R.string.supermoon)
-            ).map { it.capitalizeWords() }
+            )
 
             Pickers.item(
                 requireContext(),

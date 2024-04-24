@@ -2,7 +2,6 @@ package com.kylecorry.trail_sense.tools.tools.ui.items.render
 
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import com.kylecorry.andromeda.core.capitalizeWords
 import com.kylecorry.andromeda.core.system.Resources
 import com.kylecorry.andromeda.core.ui.setCompoundDrawables
 import com.kylecorry.trail_sense.databinding.ListItemToolBinding
@@ -27,7 +26,7 @@ class CategoryToolListItemRenderer : ToolListItemRenderer {
         binding.title.setTextColor(Resources.getPrimaryColor(context))
         binding.title.paint.isFakeBoldText = true
         binding.title.textSize = 14f
-        binding.title.text = item.title?.capitalizeWords()
+        binding.title.text = item.title
         binding.title.isVisible = item.title != null
 
         // Click action
