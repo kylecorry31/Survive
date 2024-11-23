@@ -49,3 +49,8 @@ fun <T : Comparable<T>> List<T>.range(): Range<T>? {
     val end = maxOrNull() ?: return null
     return Range(start, end)
 }
+
+fun Geofence.contains(other: Geofence): Boolean {
+    val centerDistance = center.distanceTo(other.center)
+    return centerDistance + other.radius.meters().distance <= radius.meters().distance
+}

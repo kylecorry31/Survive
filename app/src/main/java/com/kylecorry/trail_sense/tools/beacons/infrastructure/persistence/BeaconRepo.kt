@@ -82,8 +82,8 @@ class BeaconRepo private constructor(context: Context) : IBeaconRepo {
 
     override suspend fun getGroup(id: Long): BeaconGroupEntity? = beaconGroupDao.get(id)
 
-    override suspend fun getBeaconsInRegion(region: CoordinateBounds): List<BeaconEntity> {
-        return if (region.east < region.west) {
+    override suspend fun getBeaconsInRegion(region: CoordinateBounds): List<BeaconEntity> = onIO {
+        if (region.east < region.west) {
             beaconDao.getAllInRegionNear180Meridian(
                 region.north,
                 region.south,

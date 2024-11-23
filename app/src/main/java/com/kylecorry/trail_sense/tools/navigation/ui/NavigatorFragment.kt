@@ -42,13 +42,14 @@ import com.kylecorry.trail_sense.shared.UserPreferences
 import com.kylecorry.trail_sense.shared.colors.AppColor
 import com.kylecorry.trail_sense.shared.declination.DeclinationFactory
 import com.kylecorry.trail_sense.shared.declination.DeclinationUtils
+import com.kylecorry.trail_sense.shared.extensions.contains
 import com.kylecorry.trail_sense.shared.hooks.HookTriggers
 import com.kylecorry.trail_sense.shared.preferences.PreferencesSubsystem
 import com.kylecorry.trail_sense.shared.safeRoundToInt
 import com.kylecorry.trail_sense.shared.sensors.SensorService
 import com.kylecorry.trail_sense.shared.sharing.Share
 import com.kylecorry.trail_sense.tools.beacons.domain.Beacon
-import com.kylecorry.trail_sense.tools.beacons.infrastructure.persistence.BeaconRepo
+import com.kylecorry.trail_sense.tools.beacons.subsystem.BeaconsSubsystem
 import com.kylecorry.trail_sense.tools.diagnostics.status.GpsStatusBadgeProvider
 import com.kylecorry.trail_sense.tools.diagnostics.status.SensorStatusBadgeProvider
 import com.kylecorry.trail_sense.tools.diagnostics.status.StatusBadge
@@ -98,7 +99,7 @@ class NavigatorFragment : BoundFragment<ActivityNavigatorBinding>() {
 
     private val userPrefs by lazy { UserPreferences(requireContext()) }
 
-    private val beaconRepo by lazy { BeaconRepo.getInstance(requireContext()) }
+    private val beaconSubsystem by lazy { BeaconsSubsystem.getInstance(requireContext()) }
 
     private val sensorService by lazy { SensorService(requireContext()) }
     private val cache by lazy { PreferencesSubsystem.getInstance(requireContext()).preferences }
@@ -176,6 +177,11 @@ class NavigatorFragment : BoundFragment<ActivityNavigatorBinding>() {
     }
 
     private val triggers = HookTriggers()
+
+    // Nearby
+    private var lastNearbyGeofence: Geofence? = null
+    private val nearbyGeofenceBuffer: Float
+        get() = (nearbyDistance * 4).coerceIn(500f, 25000000f)
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -273,11 +279,6 @@ class NavigatorFragment : BoundFragment<ActivityNavigatorBinding>() {
             binding,
             userPrefs.navigation
         ).bind()
-
-        observeFlow(beaconRepo.getBeacons()) {
-            beacons = it
-            updateNearbyBeacons()
-        }
 
         observe(compass) { }
         observe(orientation) { }
@@ -467,6 +468,17 @@ class NavigatorFragment : BoundFragment<ActivityNavigatorBinding>() {
                     if (!isNearbyEnabled) {
                         nearbyBeacons = listOfNotNull(destination)
                         return@skipIfRunning
+                    }
+
+                    val location = gps.location
+                    val trueGeofence = Geofence(location, Distance.meters(nearbyDistance))
+
+                    if (lastNearbyGeofence?.contains(trueGeofence) != true) {
+                        // Need to reload beacons
+                        val newGeofence = Geofence(location, Distance.meters(nearbyGeofenceBuffer))
+                        lastNearbyGeofence = newGeofence
+                        beacons =
+                            beaconSubsystem.getNearbyBeacons(CoordinateBounds.from(newGeofence))
                     }
 
                     nearbyBeacons = (navigationService.getNearbyBeacons(
