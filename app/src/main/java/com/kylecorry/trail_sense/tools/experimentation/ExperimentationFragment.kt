@@ -18,14 +18,20 @@ import com.kylecorry.trail_sense.databinding.FragmentExperimentationBinding
 import com.kylecorry.trail_sense.shared.io.DeleteTempFilesCommand
 import com.kylecorry.trail_sense.shared.io.FileSubsystem
 import com.kylecorry.trail_sense.shared.views.Views
-import com.kylecorry.trail_sense.tools.species_catalog.Species
+import com.kylecorry.trail_sense.tools.species_catalog.BuiltInFieldGuide
+import com.kylecorry.trail_sense.tools.species_catalog.FieldGuidePage
+import com.kylecorry.trail_sense.tools.species_catalog.FieldGuidePageTag
 
 class ExperimentationFragment : BoundFragment<FragmentExperimentationBinding>() {
 
-    private var species by state<List<Species>>(emptyList())
+    private var species by state<List<FieldGuidePage>>(emptyList())
     private var filter by state("")
     private val importer by lazy { SpeciesImportService.create(this) }
     private val files by lazy { FileSubsystem.getInstance(requireContext()) }
+
+    private suspend fun loadFromAssets(): List<FieldGuidePage> {
+        return BuiltInFieldGuide.getFieldGuide(requireContext())
+    }
 
     override fun generateBinding(
         layoutInflater: LayoutInflater, container: ViewGroup?
@@ -37,19 +43,19 @@ class ExperimentationFragment : BoundFragment<FragmentExperimentationBinding>() 
         super.onViewCreated(view, savedInstanceState)
         inBackground(BackgroundMinimumState.Created) {
             val tagOrder = listOf(
-                "Plant",
-                "Fungus",
-                "Mammal",
-                "Bird",
-                "Reptile",
-                "Amphibian",
-                "Fish",
-                "Insect",
-                "Arachnid",
-                "Crustacean",
-                "Mollusk",
+                FieldGuidePageTag.Plant,
+                FieldGuidePageTag.Fungus,
+                FieldGuidePageTag.Mammal,
+                FieldGuidePageTag.Bird,
+                FieldGuidePageTag.Reptile,
+                FieldGuidePageTag.Amphibian,
+                FieldGuidePageTag.Fish,
+                FieldGuidePageTag.Insect,
+                FieldGuidePageTag.Arachnid,
+                FieldGuidePageTag.Crustacean,
+                FieldGuidePageTag.Mollusk,
             )
-            species = (importer.import() ?: emptyList()).sortedWith(
+            species = loadFromAssets().sortedWith(
                 compareBy(
                     {
                         it.tags.minOfOrNull { tag ->
@@ -69,38 +75,43 @@ class ExperimentationFragment : BoundFragment<FragmentExperimentationBinding>() 
     override fun onUpdate() {
         super.onUpdate()
         effect2(species, filter) {
-            binding.list.setItems(species.filter { it.name.lowercase().contains(filter.trim()) }
-                .map {
-                    val firstSentence = it.notes?.substringBefore(".")?.plus(".") ?: ""
-                    ListItem(
-                        it.id,
+            val filteredSpecies = species.filter {
+                it.name.lowercase().contains(filter.trim()) || it.tags.any { tag ->
+                    tag.name.lowercase().contains(filter.trim())
+                }
+            }
+
+            binding.list.setItems(filteredSpecies.map {
+                val firstSentence = it.notes?.substringBefore(".")?.plus(".") ?: ""
+                ListItem(
+                    it.id,
+                    it.name,
+                    it.tags.joinToString(", ") + "\n\n" + firstSentence.take(200),
+                    icon = AsyncListIcon(
+                        viewLifecycleOwner,
+                        { loadThumbnail(it) },
+                        size = 48f,
+                        clearOnPause = true
+                    ),
+                ) {
+                    dialog(
                         it.name,
-                        it.tags.joinToString(", ") + "\n\n" + firstSentence.take(200),
-                        icon = AsyncListIcon(
-                            viewLifecycleOwner,
-                            { loadThumbnail(it) },
-                            size = 48f,
-                            clearOnPause = true
+                        it.notes ?: "",
+                        allowLinks = true,
+                        contentView = Views.image(
+                            requireContext(),
+                            files.drawable(it.images.first()),
+                            width = ViewGroup.LayoutParams.MATCH_PARENT,
+                            height = Resources.dp(requireContext(), 200f).toInt()
                         ),
-                    ) {
-                        dialog(
-                            it.name,
-                            it.notes ?: "",
-                            allowLinks = true,
-                            contentView = Views.image(
-                                requireContext(),
-                                files.uri(it.images.first()),
-                                width = ViewGroup.LayoutParams.MATCH_PARENT,
-                                height = Resources.dp(requireContext(), 200f).toInt()
-                            ),
-                            scrollable = true
-                        )
-                    }
-                })
+                        scrollable = true
+                    )
+                }
+            })
         }
     }
 
-    private suspend fun loadThumbnail(species: Species): Bitmap = onIO {
+    private suspend fun loadThumbnail(species: FieldGuidePage): Bitmap = onIO {
         val size = Resources.dp(requireContext(), 48f).toInt()
         try {
             files.bitmap(species.images.first(), Size(size, size)) ?: getDefaultThumbnail()
@@ -120,5 +131,4 @@ class ExperimentationFragment : BoundFragment<FragmentExperimentationBinding>() 
             DeleteTempFilesCommand(requireContext()).execute()
         }
     }
-
 }
