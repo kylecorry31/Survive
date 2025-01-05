@@ -14,8 +14,8 @@ object BuiltInFieldGuide {
 
     private val pages = listOf(
         BuiltInFieldGuidePage(
-            R.raw.sciuridae,
-            "field_guide/Sciuridae.webp",
+            R.raw.squirrel,
+            "field_guide/squirrel.webp",
             listOf(
                 FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
@@ -34,42 +34,8 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.lepomis,
-            "field_guide/Lepomis.webp",
-            listOf(
-                FieldGuidePageTag.NorthAmerica,
-                FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Fish,
-                FieldGuidePageTag.Grassland,
-                FieldGuidePageTag.Wetland,
-                FieldGuidePageTag.Freshwater
-            )
-        ),
-        BuiltInFieldGuidePage(
-            R.raw.micropterus,
-            "field_guide/Micropterus.webp",
-            listOf(
-                FieldGuidePageTag.Asia,
-                FieldGuidePageTag.NorthAmerica,
-                FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Fish,
-                FieldGuidePageTag.Freshwater
-            )
-        ),
-        BuiltInFieldGuidePage(
-            R.raw.cyprinus,
-            "field_guide/Cyprinus.webp",
-            listOf(
-                FieldGuidePageTag.Asia,
-                FieldGuidePageTag.Europe,
-                FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Fish,
-                FieldGuidePageTag.Freshwater
-            )
-        ),
-        BuiltInFieldGuidePage(
-            R.raw.crayfish,
-            "field_guide/Crayfish.webp",
+            R.raw.sunfish,
+            "field_guide/sunfish.webp",
             listOf(
                 FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
@@ -78,10 +44,53 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.NorthAmerica,
                 FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Grassland,
+                FieldGuidePageTag.Fish,
+                FieldGuidePageTag.Freshwater
+            )
+        ),
+        BuiltInFieldGuidePage(
+            R.raw.black_bass,
+            "field_guide/black_bass.webp",
+            listOf(
+                FieldGuidePageTag.Africa,
+                FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
+                FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Fish,
+                FieldGuidePageTag.Freshwater
+            )
+        ),
+        BuiltInFieldGuidePage(
+            R.raw.carp,
+            "field_guide/carp.webp",
+            listOf(
+                FieldGuidePageTag.Africa,
+                FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
+                FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Fish,
+                FieldGuidePageTag.Freshwater
+            )
+        ),
+        BuiltInFieldGuidePage(
+            R.raw.crayfish,
+            "field_guide/crayfish.webp",
+            listOf(
+                FieldGuidePageTag.Africa,
+                FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
+                FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Crustacean,
                 FieldGuidePageTag.Wetland,
-                FieldGuidePageTag.Urban,
-                FieldGuidePageTag.Marine,
                 FieldGuidePageTag.Freshwater
             )
         ),
@@ -89,11 +98,16 @@ object BuiltInFieldGuide {
             R.raw.crab,
             "field_guide/Crab.webp",
             listOf(
+                FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Crustacean,
                 FieldGuidePageTag.Marine,
-                FieldGuidePageTag.Freshwater,
-                FieldGuidePageTag.Cave
+                FieldGuidePageTag.Freshwater
             )
         ),
         BuiltInFieldGuidePage(

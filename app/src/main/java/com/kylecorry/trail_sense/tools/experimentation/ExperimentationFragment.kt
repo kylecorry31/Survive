@@ -6,6 +6,7 @@ import android.util.Size
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import com.kylecorry.andromeda.alerts.dialog
 import com.kylecorry.andromeda.core.coroutines.BackgroundMinimumState
 import com.kylecorry.andromeda.core.coroutines.onIO
@@ -74,7 +75,7 @@ class ExperimentationFragment : BoundFragment<FragmentExperimentationBinding>() 
 
     override fun onUpdate() {
         super.onUpdate()
-        effect2(species, filter) {
+        effect2(species, filter, lifecycleHookTrigger.onResume()) {
             val filteredSpecies = species.filter {
                 it.name.lowercase().contains(filter.trim()) || it.tags.any { tag ->
                     tag.name.lowercase().contains(filter.trim())
@@ -91,6 +92,7 @@ class ExperimentationFragment : BoundFragment<FragmentExperimentationBinding>() 
                         viewLifecycleOwner,
                         { loadThumbnail(it) },
                         size = 48f,
+                        scaleType = ImageView.ScaleType.CENTER_CROP,
                         clearOnPause = true
                     ),
                 ) {

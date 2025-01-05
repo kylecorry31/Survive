@@ -1,6 +1,8 @@
 Crayfish
-Crayfish are freshwater crustaceans belonging to the infraorder Astacidea, which also contains lobsters. Taxonomically, they are members of the superfamilies Astacoidea and Parastacoidea. They breathe through feather-like gills. Some species are found in brooks and streams, where fresh water is running, while others thrive in swamps, ditches, and paddy fields. Most crayfish cannot tolerate polluted water, although some species, such as Procambarus clarkii, are hardier. Crayfish feed on animals and plants, either living or decomposing, and detritus.
+A freshwater crustacean that resembles a small lobster. They are commonly found at the bottom of streams, rivers, and lakes. Crayfish are omnivorous, feeding on plants, insects, and small fish, and are most active at night.
 
-Text derived from https://en.m.wikipedia.org/wiki/Crayfish (CC BY-SA 4.0)
+Also known as: crawfish, crawdads, freshwater lobsters, mudbugs, or yabbies.
+
+https://en.m.wikipedia.org/wiki/Crayfish
 
 Image by Canis85 (CC BY-SA 3.0)
