@@ -283,47 +283,11 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Nocturnal
             )
         ),
-        // TODO: The below have not been updated
         BuiltInFieldGuidePage(
-            R.raw.formicidae,
-            "field_guide/Formicidae.webp",
+            R.raw.field_guide_ant,
+            "field_guide/ant.webp",
             listOf(
                 FieldGuidePageTag.Africa,
-                FieldGuidePageTag.Antarctica,
-                FieldGuidePageTag.Asia,
-                FieldGuidePageTag.Australia,
-                FieldGuidePageTag.Europe,
-                FieldGuidePageTag.SouthAmerica,
-                FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Insect,
-                FieldGuidePageTag.Forest,
-                FieldGuidePageTag.Desert,
-                FieldGuidePageTag.Grassland,
-                FieldGuidePageTag.Wetland
-            )
-        ),
-        BuiltInFieldGuidePage(
-            R.raw.lumbricina,
-            "field_guide/Lumbricina.webp",
-            listOf(
-                FieldGuidePageTag.Africa,
-                FieldGuidePageTag.Asia,
-                FieldGuidePageTag.Australia,
-                FieldGuidePageTag.Europe,
-                FieldGuidePageTag.NorthAmerica,
-                FieldGuidePageTag.SouthAmerica,
-                FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Grassland,
-                FieldGuidePageTag.Marine,
-                FieldGuidePageTag.Freshwater
-            )
-        ),
-        BuiltInFieldGuidePage(
-            R.raw.coleoptera,
-            "field_guide/Coleoptera.webp",
-            listOf(
-                FieldGuidePageTag.Africa,
-                FieldGuidePageTag.Antarctica,
                 FieldGuidePageTag.Asia,
                 FieldGuidePageTag.Australia,
                 FieldGuidePageTag.Europe,
@@ -334,13 +298,52 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Forest,
                 FieldGuidePageTag.Desert,
                 FieldGuidePageTag.Grassland,
+                FieldGuidePageTag.Mountain,
+                FieldGuidePageTag.Urban,
+                FieldGuidePageTag.Wetland,
+                FieldGuidePageTag.Diurnal
+            )
+        ),
+        BuiltInFieldGuidePage(
+            R.raw.field_guide_earthworm,
+            "field_guide/earthworm.webp",
+            listOf(
+                FieldGuidePageTag.Africa,
+                FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
+                FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Insect,
+                FieldGuidePageTag.Forest,
+                FieldGuidePageTag.Grassland,
+                FieldGuidePageTag.Urban,
+                FieldGuidePageTag.Wetland,
+                FieldGuidePageTag.Nocturnal
+            )
+        ),
+        BuiltInFieldGuidePage(
+            R.raw.field_guide_grub,
+            "field_guide/grub.webp",
+            listOf(
+                FieldGuidePageTag.Africa,
+                FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
+                FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Insect,
+                FieldGuidePageTag.Forest,
+                FieldGuidePageTag.Grassland,
+                FieldGuidePageTag.Urban,
                 FieldGuidePageTag.Wetland,
                 FieldGuidePageTag.Mountain,
-                FieldGuidePageTag.Marine,
-                FieldGuidePageTag.Freshwater,
-                FieldGuidePageTag.Tundra
+                FieldGuidePageTag.Nocturnal
             )
         ),
+        // TODO: The below have not been updated
         BuiltInFieldGuidePage(
             R.raw.toxicodendron_radicans,
             "survival_guide/poison_ivy.webp",
