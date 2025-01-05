@@ -5,7 +5,8 @@ import com.kylecorry.trail_sense.shared.data.Identifiable
 enum class FieldGuidePageTagType {
     Continent,
     Habitat,
-    Classification
+    Classification,
+    ActivityPattern
 }
 
 enum class FieldGuidePageTag(override val id: Long, type: FieldGuidePageTagType) : Identifiable {
@@ -39,4 +40,7 @@ enum class FieldGuidePageTag(override val id: Long, type: FieldGuidePageTagType)
     Cave(28, FieldGuidePageTagType.Habitat),
     Tundra(29, FieldGuidePageTagType.Habitat),
     Rock(30, FieldGuidePageTagType.Classification),
+    Diurnal(31, FieldGuidePageTagType.ActivityPattern),
+    Nocturnal(32, FieldGuidePageTagType.ActivityPattern),
+    Crepuscular(33, FieldGuidePageTagType.ActivityPattern)
 }

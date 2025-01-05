@@ -30,7 +30,8 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Grassland,
                 FieldGuidePageTag.Mountain,
                 FieldGuidePageTag.Urban,
-                FieldGuidePageTag.Tundra
+                FieldGuidePageTag.Tundra,
+                FieldGuidePageTag.Diurnal
             )
         ),
         BuiltInFieldGuidePage(
@@ -45,7 +46,8 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Fish,
-                FieldGuidePageTag.Freshwater
+                FieldGuidePageTag.Freshwater,
+                FieldGuidePageTag.Diurnal
             )
         ),
         BuiltInFieldGuidePage(
@@ -60,7 +62,8 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Fish,
-                FieldGuidePageTag.Freshwater
+                FieldGuidePageTag.Freshwater,
+                FieldGuidePageTag.Diurnal
             )
         ),
         BuiltInFieldGuidePage(
@@ -75,7 +78,9 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Fish,
-                FieldGuidePageTag.Freshwater
+                FieldGuidePageTag.Freshwater,
+                FieldGuidePageTag.Nocturnal,
+                FieldGuidePageTag.Crepuscular
             )
         ),
         BuiltInFieldGuidePage(
@@ -91,7 +96,8 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Crustacean,
                 FieldGuidePageTag.Wetland,
-                FieldGuidePageTag.Freshwater
+                FieldGuidePageTag.Freshwater,
+                FieldGuidePageTag.Nocturnal
             )
         ),
         BuiltInFieldGuidePage(
@@ -107,7 +113,9 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Crustacean,
                 FieldGuidePageTag.Marine,
-                FieldGuidePageTag.Freshwater
+                FieldGuidePageTag.Freshwater,
+                FieldGuidePageTag.Crepuscular,
+                FieldGuidePageTag.Nocturnal
             )
         ),
         BuiltInFieldGuidePage(
@@ -173,7 +181,8 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Grassland,
                 FieldGuidePageTag.Wetland,
                 FieldGuidePageTag.Mountain,
-                FieldGuidePageTag.Tundra
+                FieldGuidePageTag.Tundra,
+                FieldGuidePageTag.Crepuscular
             )
         ),
         BuiltInFieldGuidePage(
@@ -195,7 +204,8 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Wetland,
                 FieldGuidePageTag.Tundra,
                 FieldGuidePageTag.Urban,
-                FieldGuidePageTag.Cave
+                FieldGuidePageTag.Cave,
+                FieldGuidePageTag.Nocturnal
             )
         ),
         BuiltInFieldGuidePage(
@@ -209,7 +219,8 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Bird,
                 FieldGuidePageTag.Forest,
                 FieldGuidePageTag.Grassland,
-                FieldGuidePageTag.Tundra
+                FieldGuidePageTag.Tundra,
+                FieldGuidePageTag.Diurnal
             )
         ),
         BuiltInFieldGuidePage(
@@ -228,15 +239,19 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Grassland,
                 FieldGuidePageTag.Wetland,
                 FieldGuidePageTag.Urban,
+                FieldGuidePageTag.Nocturnal
             )
         ),
-        // TODO: Below hasn't been updated
         BuiltInFieldGuidePage(
-            R.raw.acridomorpha,
-            "field_guide/Acridomorpha.webp",
+            R.raw.field_guide_grasshopper,
+            "field_guide/grasshopper.webp",
             listOf(
                 FieldGuidePageTag.Africa,
+                FieldGuidePageTag.Asia,
                 FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Insect,
                 FieldGuidePageTag.Forest,
@@ -244,19 +259,31 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Grassland,
                 FieldGuidePageTag.Mountain,
                 FieldGuidePageTag.Urban,
-                FieldGuidePageTag.Marine
+                FieldGuidePageTag.Diurnal
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.grylloidea,
-            "field_guide/Grylloidea.webp",
+            R.raw.field_guide_cricket,
+            "field_guide/cricket.webp",
             listOf(
+                FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Insect,
-                FieldGuidePageTag.Cave
+                FieldGuidePageTag.Forest,
+                FieldGuidePageTag.Desert,
+                FieldGuidePageTag.Grassland,
+                FieldGuidePageTag.Mountain,
+                FieldGuidePageTag.Urban,
+                FieldGuidePageTag.Cave,
+                FieldGuidePageTag.Nocturnal
             )
         ),
+        // TODO: The below have not been updated
         BuiltInFieldGuidePage(
             R.raw.formicidae,
             "field_guide/Formicidae.webp",
