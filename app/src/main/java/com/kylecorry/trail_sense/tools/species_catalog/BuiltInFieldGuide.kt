@@ -96,7 +96,7 @@ object BuiltInFieldGuide {
         ),
         BuiltInFieldGuidePage(
             R.raw.crab,
-            "field_guide/Crab.webp",
+            "field_guide/crab.webp",
             listOf(
                 FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
@@ -112,32 +112,37 @@ object BuiltInFieldGuide {
         ),
         BuiltInFieldGuidePage(
             R.raw.clam,
-            "field_guide/Clam.webp",
+            "field_guide/clam.webp",
             listOf(
+                FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
                 FieldGuidePageTag.Europe,
                 FieldGuidePageTag.NorthAmerica,
                 FieldGuidePageTag.SouthAmerica,
-                FieldGuidePageTag.Wetland,
+                FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Mollusk,
                 FieldGuidePageTag.Marine,
                 FieldGuidePageTag.Freshwater
             )
         ),
         BuiltInFieldGuidePage(
             R.raw.mussel,
-            "field_guide/Mussel.webp",
+            "field_guide/mussel.webp",
             listOf(
                 FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
                 FieldGuidePageTag.Europe,
                 FieldGuidePageTag.NorthAmerica,
                 FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Wetland,
+                FieldGuidePageTag.Mollusk,
                 FieldGuidePageTag.Marine,
                 FieldGuidePageTag.Freshwater
             )
         ),
+        // TODO: Continue updating guides from this point on
         BuiltInFieldGuidePage(
             R.raw.littorinidae,
             "field_guide/Littorinidae.webp",
