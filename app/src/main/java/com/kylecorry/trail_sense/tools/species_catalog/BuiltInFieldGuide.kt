@@ -156,15 +156,16 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Marine
             )
         ),
-        // TODO: Continue updating guides from this point on
         BuiltInFieldGuidePage(
-            R.raw.leporidae,
-            "field_guide/Leporidae.webp",
+            R.raw.rabbit,
+            "field_guide/rabbit.webp",
             listOf(
-                FieldGuidePageTag.Antarctica,
+                FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
                 FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
                 FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Mammal,
                 FieldGuidePageTag.Forest,
@@ -176,33 +177,28 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.dasyprocta,
-            "field_guide/Dasyprocta.webp",
-            listOf(
-                FieldGuidePageTag.SouthAmerica,
-                FieldGuidePageTag.Animal,
-                FieldGuidePageTag.Mammal,
-                FieldGuidePageTag.Grassland
-            )
-        ),
-        BuiltInFieldGuidePage(
-            R.raw.muridae,
-            "field_guide/Muridae.webp",
+            R.raw.mouse,
+            "field_guide/mouse.webp",
             listOf(
                 FieldGuidePageTag.Africa,
                 FieldGuidePageTag.Asia,
                 FieldGuidePageTag.Australia,
                 FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Mammal,
                 FieldGuidePageTag.Forest,
                 FieldGuidePageTag.Desert,
                 FieldGuidePageTag.Grassland,
                 FieldGuidePageTag.Mountain,
-                FieldGuidePageTag.Freshwater,
-                FieldGuidePageTag.Tundra
+                FieldGuidePageTag.Wetland,
+                FieldGuidePageTag.Tundra,
+                FieldGuidePageTag.Urban,
+                FieldGuidePageTag.Cave
             )
         ),
+        // TODO: Below hasn't been updated
         BuiltInFieldGuidePage(
             R.raw.tetraonini,
             "field_guide/Tetraonini.webp",
