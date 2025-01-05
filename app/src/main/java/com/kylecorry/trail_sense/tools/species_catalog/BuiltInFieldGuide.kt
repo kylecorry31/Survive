@@ -14,7 +14,7 @@ object BuiltInFieldGuide {
 
     private val pages = listOf(
         BuiltInFieldGuidePage(
-            R.raw.squirrel,
+            R.raw.field_guide_squirrel,
             "field_guide/squirrel.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -34,7 +34,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.sunfish,
+            R.raw.field_guide_sunfish,
             "field_guide/sunfish.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -49,7 +49,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.black_bass,
+            R.raw.field_guide_black_bass,
             "field_guide/black_bass.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -64,7 +64,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.carp,
+            R.raw.field_guide_carp,
             "field_guide/carp.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -79,7 +79,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.crayfish,
+            R.raw.field_guide_crayfish,
             "field_guide/crayfish.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -95,7 +95,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.crab,
+            R.raw.field_guide_crab,
             "field_guide/crab.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -111,7 +111,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.clam,
+            R.raw.field_guide_clam,
             "field_guide/clam.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -127,7 +127,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.mussel,
+            R.raw.field_guide_mussel,
             "field_guide/mussel.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -143,7 +143,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.periwinkle,
+            R.raw.field_guide_periwinkle,
             "field_guide/periwinkle.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -157,7 +157,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.rabbit,
+            R.raw.field_guide_rabbit,
             "field_guide/rabbit.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -177,7 +177,7 @@ object BuiltInFieldGuide {
             )
         ),
         BuiltInFieldGuidePage(
-            R.raw.mouse,
+            R.raw.field_guide_mouse,
             "field_guide/mouse.webp",
             listOf(
                 FieldGuidePageTag.Africa,
@@ -198,11 +198,13 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Cave
             )
         ),
-        // TODO: Below hasn't been updated
         BuiltInFieldGuidePage(
-            R.raw.tetraonini,
-            "field_guide/Tetraonini.webp",
+            R.raw.field_guide_grouse,
+            "field_guide/grouse.webp",
             listOf(
+                FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
                 FieldGuidePageTag.Animal,
                 FieldGuidePageTag.Bird,
                 FieldGuidePageTag.Forest,
@@ -210,6 +212,7 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Tundra
             )
         ),
+        // TODO: Below hasn't been updated
         BuiltInFieldGuidePage(
             R.raw.isoptera,
             "field_guide/Isoptera.webp",
