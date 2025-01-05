@@ -142,12 +142,21 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Freshwater
             )
         ),
-        // TODO: Continue updating guides from this point on
         BuiltInFieldGuidePage(
-            R.raw.littorinidae,
-            "field_guide/Littorinidae.webp",
-            listOf(FieldGuidePageTag.Animal, FieldGuidePageTag.Marine, FieldGuidePageTag.Freshwater)
+            R.raw.periwinkle,
+            "field_guide/periwinkle.webp",
+            listOf(
+                FieldGuidePageTag.Africa,
+                FieldGuidePageTag.Asia,
+                FieldGuidePageTag.Australia,
+                FieldGuidePageTag.Europe,
+                FieldGuidePageTag.NorthAmerica,
+                FieldGuidePageTag.SouthAmerica,
+                FieldGuidePageTag.Animal,
+                FieldGuidePageTag.Marine
+            )
         ),
+        // TODO: Continue updating guides from this point on
         BuiltInFieldGuidePage(
             R.raw.leporidae,
             "field_guide/Leporidae.webp",
@@ -584,7 +593,7 @@ object BuiltInFieldGuide {
             )
         ),
     )
-    
+
     fun getFieldGuide(context: Context): List<FieldGuidePage> {
         return pages.mapIndexed { index, page ->
             val text = TextUtils.loadTextFromResources(context, page.resourceId)
