@@ -212,13 +212,11 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Tundra
             )
         ),
-        // TODO: Below hasn't been updated
         BuiltInFieldGuidePage(
-            R.raw.isoptera,
-            "field_guide/Isoptera.webp",
+            R.raw.field_guide_termite,
+            "field_guide/termite.webp",
             listOf(
                 FieldGuidePageTag.Africa,
-                FieldGuidePageTag.Antarctica,
                 FieldGuidePageTag.Asia,
                 FieldGuidePageTag.Australia,
                 FieldGuidePageTag.Europe,
@@ -230,9 +228,9 @@ object BuiltInFieldGuide {
                 FieldGuidePageTag.Grassland,
                 FieldGuidePageTag.Wetland,
                 FieldGuidePageTag.Urban,
-                FieldGuidePageTag.Freshwater
             )
         ),
+        // TODO: Below hasn't been updated
         BuiltInFieldGuidePage(
             R.raw.acridomorpha,
             "field_guide/Acridomorpha.webp",
