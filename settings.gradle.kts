@@ -28,3 +28,4 @@ dependencyResolutionManagement {
 
 include(":app")
 rootProject.name = "Trail Sense"
+include(":lintchecks")

@@ -32,6 +32,7 @@ roomVersion = "2.6.1"
 sol = "10.2.0"
 workRuntimeKtx = "2.10.0"
 preferenceKtx = "1.2.1"
+lint = "31.8.1"
 
 [libraries]
 androidx-test-core = { module = "androidx.test:core", version.ref = "androidXTest" }
@@ -107,8 +108,11 @@ sol = { module = "com.kylecorry:sol", version.ref = "sol" }
 work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "preferenceKtx" }
 work-testing = { module = "androidx.work:work-testing", version.ref = "workRuntimeKtx" }
+lint-api = { module = "com.android.tools.lint:lint-api", version.ref = "lint" }
+lint-checks = { module = "com.android.tools.lint:lint-checks", version.ref = "lint" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidApplication" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroidVersion" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+android-lint = { id = "com.android.lint", version.ref = "androidApplication" }

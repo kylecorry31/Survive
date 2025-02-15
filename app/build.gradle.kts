@@ -57,7 +57,7 @@ android {
                 "proguard-rules.pro"
             )
         }
-        getByName("debug"){
+        getByName("debug") {
             testProguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -70,7 +70,7 @@ android {
             versionNameSuffix = "-staging"
         }
         // Play store build
-        create("playStore"){
+        create("playStore") {
             initWith(getByName("release"))
         }
         // Debug build (GitHub)
@@ -183,6 +183,9 @@ dependencies {
     // Misc
     implementation(libs.sol)
     implementation(libs.luna)
+
+    // Linting
+    lintChecks(project(":lintchecks"))
 
     // Testing
     testImplementation(libs.junit)

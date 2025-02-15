@@ -57,6 +57,8 @@ class FieldGuidePageFragment : TrailSenseReactiveFragment(R.layout.fragment_fiel
         }
 
         useEffect(page, titleView, notesView, imageView, tagsView) {
+            useMemo(page) {
+            }
             titleView.rightButton.isVisible = page?.isReadOnly == false
             titleView.rightButton.setOnClickListener {
                 findNavController().navigate(
