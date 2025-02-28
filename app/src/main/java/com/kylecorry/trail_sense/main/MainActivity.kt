@@ -32,6 +32,7 @@ import com.kylecorry.andromeda.fragments.ColorTheme
 import com.kylecorry.andromeda.permissions.Permissions
 import com.kylecorry.sol.units.Coordinate
 import com.kylecorry.trail_sense.R
+import com.kylecorry.trail_sense.RustBridge
 import com.kylecorry.trail_sense.databinding.ActivityMainBinding
 import com.kylecorry.trail_sense.main.errors.ExceptionHandler
 import com.kylecorry.trail_sense.onboarding.OnboardingActivity
@@ -84,6 +85,9 @@ class MainActivity : AndromedaActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         ExceptionHandler.initialize(this)
+
+        val result = RustBridge().hello("Android")
+        println(result)
 
         userPrefs = UserPreferences(applicationContext)
         val mode = when (userPrefs.theme) {

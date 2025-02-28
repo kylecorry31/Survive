@@ -1,3 +1,4 @@
+import org.gradle.internal.declarativedsl.parsing.main
 import java.time.LocalDate
 
 plugins {
@@ -110,6 +111,12 @@ android {
 
     lint {
         abortOnError = false
+    }
+
+    sourceSets {
+        getByName("main") {
+            jniLibs.srcDirs("src/main/jniLibs")
+        }
     }
 }
 

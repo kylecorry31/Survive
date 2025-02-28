@@ -1,0 +1,17 @@
+[package]
+name = "rust_module"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+jni = "0.21.1"
+
+[profile.release]
+opt-level = "z"   # Optimize for size (smaller than "3", which is speed)
+lto = true        # Enable Link-Time Optimization
+codegen-units = 1 # Reduce parallelism for better optimization
+strip = true      # Strip debug symbols
+panic = "abort"   # Remove panic unwinding code
